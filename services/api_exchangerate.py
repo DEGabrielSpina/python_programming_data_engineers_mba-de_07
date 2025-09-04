@@ -1,10 +1,17 @@
 import requests
 import json
+import os
+from dotenv import load_dotenv
+
+from services.log import AppLogger
 
 def get_exchangerate() -> json:
 
-    url = "https://v6.exchangerate-api.com/v6/6510a68a39473c708cee5cf4/latest/BRL"
-    api_key = "6510a68a39473c708cee5cf4"
+    load_dotenv()
+    logger = AppLogger.get_logger("main")
+
+    url = os.getenv("url")
+    api_key = os.getenv("api_key")
 
     headers = {
         "Authorization": f"Bearer {api_key}",  
@@ -17,6 +24,7 @@ def get_exchangerate() -> json:
     if response.status_code == 200:
         return response.json()
     else:
+        logger.error("Erro ao acessar a api exchange:", response.status_code, response.text)
         raise Exception("Erro:", response.status_code, response.text)
 
 

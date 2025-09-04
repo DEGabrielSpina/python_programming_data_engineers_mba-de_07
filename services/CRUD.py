@@ -1,9 +1,14 @@
 import pandas as pd
+import os
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
 
 class CRUD:
     def __init__(self):
-        self.conn_url = 'postgresql://neondb_owner:npg_yCjQUFNi84cp@ep-crimson-mud-ads1ann5-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
+
+        load_dotenv()
+        self.conn_url = os.getenv("conn_url")
+        
 
     def insert_dataframe(self, df: pd.DataFrame, table_: str, schema_: str) -> None:
 

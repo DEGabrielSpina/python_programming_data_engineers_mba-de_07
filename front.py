@@ -1,9 +1,18 @@
+import os
+from dotenv import load_dotenv
 from google import genai
 
 from services.CRUD import CRUD
+from services.log import AppLogger
 
 
 def ask(question, csv):
+
+    load_dotenv()
+    logger = AppLogger.get_logger("main")
+
+    google_api_key = os.getenv("google_api_key")
+    
 
     prompt = f'''
     Você é um analista financeiro. Responda em português.
@@ -14,20 +23,25 @@ def ask(question, csv):
     {csv}
     '''
 
-    client = genai.Client(api_key='AIzaSyCafZupwAfXKzSQfdkgqDUfLWw041mopnQ')
+    client = genai.Client(api_key=google_api_key)
 
     resp = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=prompt
     ) 
 
+    logger.info(f'Pergunta: {question} \nRetorno gemini: {resp.text}')
     return resp.text
 
 if __name__ == '__main__':
 
+    load_dotenv()
+
+    query_data = os.getenv("query_data")
+
     db = CRUD()
 
-    df = db.select_dataframe('select * from py_for_de.coin_rate_return_vol')
+    df = db.select_dataframe(query_data)
 
     csv = df.to_csv(index=False)
 
@@ -38,16 +52,3 @@ if __name__ == '__main__':
             break
         else:
             print(ask(question, csv))
-
-    
-
-
-
-'''
-client = genai.Client(api_key='AIzaSyCafZupwAfXKzSQfdkgqDUfLWw041mopnQ')
-
-resp = client.models.generate_content(
-    model="gemini-2.5-flash",
-    contents=prompt
-) 
-'''

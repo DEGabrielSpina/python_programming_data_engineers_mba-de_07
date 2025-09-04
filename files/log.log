@@ -1,0 +1,53 @@
+2025-09-03 21:12:09,914 - DEBUG - Starting new HTTPS connection (1): v6.exchangerate-api.com:443
+2025-09-03 21:12:11,048 - DEBUG - https://v6.exchangerate-api.com:443 "GET /v6/6510a68a39473c708cee5cf4/latest/BRL HTTP/1.1" 200 None
+2025-09-03 21:12:11,048 - INFO - Acesso a api exchange com sucesso
+2025-09-03 21:24:21,166 - DEBUG - Starting new HTTPS connection (1): v6.exchangerate-api.com:443
+2025-09-03 21:24:22,090 - DEBUG - https://v6.exchangerate-api.com:443 "GET /v6/6510a68a39473c708cee5cf4/latest/BRL HTTP/1.1" 200 None
+2025-09-03 21:31:08,447 - DEBUG - Starting new HTTPS connection (1): v6.exchangerate-api.com:443
+2025-09-03 21:31:09,033 - DEBUG - https://v6.exchangerate-api.com:443 "GET /v6/6510a68a39473c708cee5cf4/latest/BRL HTTP/1.1" 200 None
+2025-09-03 21:33:48,309 - DEBUG - Starting new HTTPS connection (1): v6.exchangerate-api.com:443
+2025-09-03 21:33:49,235 - DEBUG - https://v6.exchangerate-api.com:443 "GET /v6/6510a68a39473c708cee5cf4/latest/BRL HTTP/1.1" 200 None
+2025-09-03 21:34:12,536 - INFO - Executado com sucesso.
+2025-09-03 21:37:10,673 - WARNING - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-09-03 21:37:11,141 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-03 21:37:11,142 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-09-03 21:37:11,241 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001CDF8DEE7B0>
+2025-09-03 21:37:11,241 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001CDF89D9E50> server_hostname='generativelanguage.googleapis.com' timeout=None
+2025-09-03 21:37:11,597 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001CDF8A5DF90>
+2025-09-03 21:37:11,597 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-09-03 21:37:11,597 - DEBUG - send_request_headers.complete
+2025-09-03 21:37:11,597 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-09-03 21:37:11,603 - DEBUG - send_request_body.complete
+2025-09-03 21:37:11,603 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-09-03 21:37:18,595 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 04 Sep 2025 00:37:16 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=6701'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-09-03 21:37:18,595 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-03 21:37:18,596 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-09-03 21:37:18,596 - DEBUG - receive_response_body.complete
+2025-09-03 21:37:18,596 - DEBUG - response_closed.started
+2025-09-03 21:37:18,596 - DEBUG - response_closed.complete
+2025-09-03 21:37:18,597 - INFO - AFC remote call 1 is done.
+2025-09-03 21:37:18,597 - INFO - Retorno gemini: A última data disponível nos dados fornecidos é **2025-09-03**.
+2025-09-03 21:37:18,597 - DEBUG - close.started
+2025-09-03 21:37:18,597 - DEBUG - close.complete
+2025-09-03 21:38:28,442 - WARNING - Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+2025-09-03 21:38:28,911 - INFO - AFC is enabled with max remote calls: 10.
+2025-09-03 21:38:28,912 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-09-03 21:38:28,920 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001DFADEFE7B0>
+2025-09-03 21:38:28,920 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001DFADAB9E50> server_hostname='generativelanguage.googleapis.com' timeout=None
+2025-09-03 21:38:28,988 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001DFADB3DF90>
+2025-09-03 21:38:28,988 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-09-03 21:38:28,988 - DEBUG - send_request_headers.complete
+2025-09-03 21:38:28,988 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-09-03 21:38:28,992 - DEBUG - send_request_body.complete
+2025-09-03 21:38:28,992 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-09-03 21:38:36,009 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Thu, 04 Sep 2025 00:38:34 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=6873'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-09-03 21:38:36,009 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-03 21:38:36,010 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-09-03 21:38:36,010 - DEBUG - receive_response_body.complete
+2025-09-03 21:38:36,010 - DEBUG - response_closed.started
+2025-09-03 21:38:36,010 - DEBUG - response_closed.complete
+2025-09-03 21:38:36,011 - INFO - AFC remote call 1 is done.
+2025-09-03 21:38:36,011 - INFO - Pergunta: Qual o primeiro dia disponivel ? 
+Retorno gemini: O primeiro dia disponível nos dados fornecidos é **2025-08-26**.
+2025-09-03 21:38:36,011 - DEBUG - close.started
+2025-09-03 21:38:36,011 - DEBUG - close.complete
